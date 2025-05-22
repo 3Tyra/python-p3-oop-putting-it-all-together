@@ -1,28 +1,25 @@
 #!/usr/bin/env python3
 
-class Book:
-    def __init__(self,title,page_count):
-        self.title = title
-        self._page_count = None
-        self.page_count = page_count
+class Shoe:
+    def __init__(self,brand,size):
+        self.brand= brand
+        self._size = None
+        self.size = size
+        self.condition = "Old"
 
     @property
-    def page_count(self):
-        return self._page_count
+    def size(self):
+        return self._size
     
-    @page_count.setter
-    def page_count(self,value):
+    @size.setter
+    def size(self,value):
         if isinstance(value, int):
-            self._page_count = value
+            self._size = value
         else:
-            print("page_count must be an integer")
+            print("size must be an integer")
 
-    def turn_page(self):
-        print("Flipping the page...wow, you read fast!")
+    def cobble(self):
+        print("Your shoe is as good as new!")
+        self.condition = "New"
 
     
-
-    
-        
-    
-        
